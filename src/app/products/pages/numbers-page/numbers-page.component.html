@@ -1,1 +1,15 @@
-<p>numbers-page works!</p>
+<p-panel header="Numbers" class="pt-2">
+  <div class="grid">
+    <div class="col-12 md:col-4">
+      <p-card header="Number">{{ totalSells | number : "1.2-2" }}</p-card>
+    </div>
+    <div class="col-12 md:col-4">
+      <p-card header="COP">{{
+        totalSells | currency : "COP" : "symbol-narrow" : "1.4-4"
+      }}</p-card>
+    </div>
+    <div class="col-12 md:col-4">
+      <p-card header="Porcentaje">{{ percent | percent : "1.2-2" }}</p-card>
+    </div>
+  </div>
+</p-panel>

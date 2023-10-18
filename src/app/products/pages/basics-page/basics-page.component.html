@@ -31,22 +31,25 @@
           <li>{{ customDate | date : "long" }}</li>
           <li>{{ customDate | date : "MMMM" }}</li>
           <li>{{ customDate | date : "MMMM dd, yyyy" }}</li>
+          <li>{{ customDate | date : "MMMM dd, yyyy" }}</li>
         </ol>
       </p-card>
     </div>
     <div class="col-12 md:col-6">
-      <p-card header="titlecase">
+      <p-card header="Dates and languages">
         <ol>
           <li>fecha | date:'long:'GMT-6'</li>
           <li>fecha | date:'long:'GMT-4'</li>
+          <li>fecha | date:'long:'': "es-HN"</li>
         </ol>
       </p-card>
     </div>
     <div class="col-12 md:col-6">
-      <p-card header="titlecase">
+      <p-card header="Dates and languages">
         <ol>
           <li>{{ customDate | date : "long" : "GMT-6" }}</li>
           <li>{{ customDate | date : "long" : "GMT-4" }}</li>
+          <li>{{ customDate | date : "long" : "" : "es-CO" }}</li>
         </ol>
       </p-card>
     </div>
