@@ -4,8 +4,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 	name: 'toggleCase'
 })
 export class ToggleCasePipe implements PipeTransform {
-	transform(value: string) {
-		throw new Error("Method not implemented.");
+	transform(value: string, toupper: boolean = false): string {
+		return (toupper) ? value.toUpperCase() : value.toLowerCase()
 	}
-
 }
