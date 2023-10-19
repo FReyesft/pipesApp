@@ -31,7 +31,7 @@ export class UncommonPageComponent {
 
   public promiseValue: Promise<string> = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('JIJIJIJIJJIJIJIJIJI')
+      resolve('HOLA B)')
     }, 1000);
   })
 
