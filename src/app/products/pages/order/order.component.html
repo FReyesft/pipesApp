@@ -13,15 +13,27 @@
         (click)="toggleUpperCase()"
       ></p-button>
       <p-button
+        (click)="changeOrder('name')"
         label="Por nombre"
         styleClass="p-button-success mr-2"
       ></p-button>
-      <p-button label="CanFly" styleClass="p-button-danger"></p-button>
-      <p-button label="Por Color" styleClass="p-button-success ml-2"></p-button>
+      <p-button
+        (click)="changeOrder('canFly')"
+        label="CanFly"
+        styleClass="p-button-danger"
+      ></p-button>
+      <p-button
+        (click)="changeOrder('color')"
+        label="Por Color"
+        styleClass="p-button-success ml-2"
+      ></p-button>
     </div>
   </p-toolbar>
   <p-panel header="Héroes">
-    <p-table [value]="hero" [tableStyle]="{ 'min-width': '50rem' }">
+    <p-table
+      [value]="hero | sortBy : orderBy"
+      [tableStyle]="{ 'min-width': '50rem' }"
+    >
       <ng-template pTemplate="header">
         <tr>
           <th>Nombre</th>
